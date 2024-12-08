@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+// Import all the charts from their respective components
+import BarChart from './components/BarChart';
+import LineChart from './components/LineChart';
+import ScatterChart from './components/ScatterChart';
+import BubbleChart from './components/BubbleChart';
 
 const App = () => {
   const [chartData, setChartData] = useState(null);
@@ -17,8 +22,19 @@ const App = () => {
   }
 
   return (
+    // Render all the charts in this div
     <div>
       <h1>Dynamic Chart Dashboard</h1>
+      <h1> Barchart </h1>
+      <BarChart data={chartData} />
+      <h1> Line Chart</h1>
+      <LineChart data={chartData} />
+      <h1> Scatter Chart</h1>
+      <ScatterChart data={chartData} />
+      <h1> Bubble Chart</h1>
+      <BubbleChart data={chartData} />
+
+
     </div>
   );
 };
